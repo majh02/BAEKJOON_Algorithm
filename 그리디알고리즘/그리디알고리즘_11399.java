@@ -3,9 +3,7 @@ package 그리디알고리즘;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class 그리디알고리즘_11399 {
