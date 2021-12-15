@@ -1,4 +1,3 @@
-// #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disabled:4996)
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,20 +6,22 @@
 
 int n;
 int pixel[MAX][MAX]={0,};
+int index = 0;
 int find_component(int i, int j){
     if(i<0||i>=n||j<0||j>=n) return 0;
-    if(pixel[i][j]==1){
-        pixel[i][j]==2;
-        printf("%d %d\n",i,j);
-        int result = find_component(i-1,j-1)+find_component(i,j-1)+find_component(i+1,j-1)+find_component(i-1,j)+find_component(i+1,j)+find_component(i-1,j+1)+find_component(i,j+1)+find_component(i+1,j+1);
-        if(result == 0) return result+1;
-        else return 1;
+    else if(pixel[i][j]!=1) return 0;
+    else{
+        pixel[i][j]=visited;
+        int result = find_component(i-1,j+1)+find_component(i,j+1)+find_component(i+1,j+1)
+        +find_component(i-1,j-1)+find_component(i,j-1)+find_component(i+1,j-1)
+        +find_component(i-1,j)+find_component(i+1,j);
+        if(result==0) index++;
+        return 1+result;
     }
     return 0;
 }
 
 int main(){
-
     FILE* fp = fopen("input.txt","r");
     while(!feof(fp)){
         fscanf(fp,"%d",&n);
@@ -32,13 +33,16 @@ int main(){
     }
     fclose(fp);
 
+    int count[MAX] = {0,};
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
-            printf("%d\n",find_component(i,j));
+            count[index]+=find_component(i,j);
         }
     }
-    // printf("%d\n",find_component(0,0));
-    
+    for(int i=0;i<index;i++){
+        if(count[i]==0) continue;
+        printf("%d ",count[i]);
+    }
     
     return 0;
 }
