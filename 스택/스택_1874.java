@@ -17,17 +17,50 @@ public class 스택_1874 {
         }
 
         int index = 0;
+        String[] sign = new String[n*3];
+        int sign_index = 0;
         for(int i=1;i<=n;i++){
             while(true){
                 if(!stack.empty()&&stack.peek()==array[index]){
-                    stack.pop(); 
+                    stack.pop();
                     index++;
-                    System.out.println("-");
+                    sign[sign_index] = "-";
+                    sign_index++;
+                }
+                else if(!stack.empty()&&stack.peek()>array[index]){
+                    index=-1;
+                    break;
                 }
                 else break;
             }
+            if(i==n+1||index==-1) break;
             stack.push(i);
-            System.out.println("+");
+            sign[sign_index] = "+";
+            sign_index++;
+        }
+
+        if(index==-1) {
+            System.out.println("NO");
+            return;
+        }
+        else{
+            while(true){
+                if(stack.peek()==array[index]){
+                    sign[sign_index] = "-";
+                    sign_index++;
+                    index++;
+                    stack.pop();
+                }
+                else{
+                    System.out.println("NO");
+                    return;
+                }
+                if(stack.empty()) break;
+            }
+        }
+
+        for(int j=0;j<sign_index;j++){
+            System.out.println(sign[j]);
         }
     }
 }
