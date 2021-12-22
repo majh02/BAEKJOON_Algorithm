@@ -20,22 +20,20 @@ public class 스택_17298 {
         }
 
         for(int i=0;i<N;i++){
-            stack.clear();
-            int NGE = arr[i];
-            while(true){
-                //System.out.println("size = "+stack.size());
-                if(stack.size()==i+1){
-                    if(NGE==arr[i]){
-                        NGE = -1;
-                    }
-                    break;
-                }
-                if(stack.peek()>arr[i]){
-                    NGE = stack.peek();
-                }
-                stack.pop();
+            while(!stack.empty()&&arr[stack.peek()]<arr[i]){
+                arr[stack.pop()] = arr[i];
             }
-            System.out.print(NGE+" ");
+            stack.push(i);
         }
+
+        while(!stack.empty()){
+            arr[stack.pop()] = -1;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for(int v:arr){
+            sb.append(v).append(' ');
+        }
+        System.out.println(sb);
     }
 }
