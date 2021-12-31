@@ -13,48 +13,48 @@ public class 큐덱_5430 {
         StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(br.readLine());
         for(int t=0;t<T;t++){
-            String P = br.readLine();
-            String[] p_arr = new String[P.length()];
-            for(int i=0;i<P.length();i++){
-                p_arr[i] = P.substring(i,i+1);
-            }
-            
+            String p = br.readLine();
             int n = Integer.parseInt(br.readLine());
+
+            StringTokenizer st = new StringTokenizer(br.readLine(),"[],");
             LinkedList<Integer> deque = new LinkedList<>();
-            String arr = br.readLine();
-            if(n==0){
-                sb.append("error"); continue;
+            for(int i=0;i<n;i++){
+                deque.add(Integer.parseInt(st.nextToken()));
             }
 
-            int k=1;
-            while(k<arr.length()){
-                int num = Integer.parseInt(arr.substring(k, k+1));
-                deque.addLast(num);
-                if(deque.size()==n) break;
-                else k+=2;
-            }
-
-            for(int i=0;i<p_arr.length;i++){
-                if(p_arr[i].equals("R")){
-                    for(int j=0;j<deque.size();j++){
-                        int index = j;
-                        deque.addFirst(deque.get(index*2));
-                    }
-                    for(int j=0;j<deque.size()/2;j++){
-                        deque.removeLast();
-                    }
+            boolean R = false;
+            for(int i=0;i<p.length();i++){
+                String P = p.substring(i,i+1);
+                if(P.equals("R")){
+                    R = !R;
                 }
-                else if(p_arr[i].equals("D")){
+                else if(P.equals("D")){
                     if(deque.isEmpty()){
                         n=-1;
                         break;
                     }
-                    deque.removeFirst();
+                    if(R==true){
+                        deque.removeLast();
+                    }
+                    else deque.removeFirst();
                 }
             }
             if(n==-1) sb.append("error\n");
-            else sb.append(deque).append("\n");
-            deque.clear();
+            else if (deque.isEmpty()) sb.append("[]\n");
+            else if(R==true){
+                sb.append('[').append(deque.pollLast());
+                while(!deque.isEmpty()){
+                    sb.append(',').append(deque.pollLast());
+                }
+                sb.append(']').append('\n');
+            }
+            else{
+                sb.append('[').append(deque.pollFirst());
+                while(!deque.isEmpty()){
+                    sb.append(',').append(deque.pollFirst());
+                }
+                sb.append(']').append('\n');
+            }
         }
         System.out.println(sb);
     }
