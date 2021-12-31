@@ -1,4 +1,4 @@
-//1966번_프린터 큐 - 미해결
+//1966번_프린터 큐
 package 큐덱;
 
 import java.io.BufferedReader;
@@ -12,9 +12,7 @@ public class 큐덱_1966 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int T = Integer.parseInt(br.readLine());
-
         int N, doc;
-        LinkedList<Integer> queue = new LinkedList<>();
         StringBuilder sb = new StringBuilder();
         for(int i=0;i<T;i++){
             st = new StringTokenizer(br.readLine()," ");
@@ -22,6 +20,7 @@ public class 큐덱_1966 {
             doc = Integer.parseInt(st.nextToken());
 
             st = new StringTokenizer(br.readLine());
+            LinkedList<Integer> queue = new LinkedList<>();
             for(int j=0;j<N;j++){
                 int num = Integer.parseInt(st.nextToken());
                 queue.add(num);
@@ -38,40 +37,29 @@ public class 큐덱_1966 {
                 if(index!=doc){
                     for(int n=0;n<index;n++){
                         queue.add(queue.poll());
+                        if(doc==0) doc = queue.size()-1;
+                        else doc--;
                     }
                     queue.remove();
                     count++;
-                    doc = doc-index;
-                    if(doc<0) doc = queue.size()+doc;
+                    if(doc==0) doc = queue.size()-1;
+                    else doc--;
                 }
                 else{
-                    for(int m=0;m<doc;m++) {
-                        if (queue.get(doc) == queue.get(m)) {
-                            index = m;
-                            break;
+                    int value = queue.get(doc);
+                    for(int n=0;n<=doc;n++){
+                        if(queue.peek()<value){
+                            queue.add(queue.poll());
                         }
-                    }
-                    if(index!=doc){
-                        for(int n=0;n<=doc;n++){
-                            if(n<index){
-                                queue.add(queue.poll());
-                            }
-                            else{
-                                queue.remove();
-                                count++;
-                            }
+                        else{
+                            queue.remove();
+                            count++;
                         }
-                    }
-                    else{
-                        queue.remove();
-                        count++;
                     }
                     break;
                 }
             }
-
             sb.append(count).append("\n");
-            queue.clear();
         }
         System.out.print(sb);
     }
