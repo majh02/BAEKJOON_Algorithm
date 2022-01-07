@@ -1,4 +1,5 @@
 //10816번_숫자카드2
+//https://yhwan.tistory.com/10 참고했음
 package 이분탐색;
 
 import java.io.BufferedReader;
@@ -29,19 +30,33 @@ public class 이분탐색_10816 {
         st = new StringTokenizer(br.readLine(), " ");
         for(int i=0;i<M;i++){
             B[i] = Long.parseLong(st.nextToken());
-            sb.append(binary_search(A, B[i], N/2, N-1)-binary_search(A, B[i], 0, N/2)+1).append(" ");
+            int upper_index = upper_binary(B[i], N);
+            int lower_index = lower_binary(B[i], N);
+            int result = upper_index-lower_index;
+
+            if(upper_index==N-1&&A[N-1]==B[i]) result+=1;
+            sb.append(result).append(" ");
         }
         System.out.println(sb);
     }
 
-    public static int binary_search(long[] A, long target, int start, int end){
-        if(start > end) return 0;
-        int mid = (start+end)/2;
-        if(A[mid]==target) {
-            return mid;
+    public static int lower_binary(long target, int size){
+        int start = 0, end = size-1;
+        while(end>start){
+            int mid = (start+end)/2;
+            if(A[mid]>=target) end = mid;
+            else start = mid+1;
         }
-        else if(A[mid]>target) return binary_search(A, target, start, mid-1);
-        return binary_search(A, target, mid+1, end);
+        return end;
     }
-    
+
+    public static int upper_binary(long target, int size){
+        int start = 0, end = size-1;
+        while(end>start){
+            int mid = (start+end)/2;
+            if(A[mid]>target) end = mid;
+            else start = mid+1;
+        }
+        return end;
+    }
 }
