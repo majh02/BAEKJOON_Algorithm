@@ -33,7 +33,6 @@ public class 이분탐색_1654 {
             for(int i=0;i<K;i++){
                 count+=(lines[i]/mid);
             }
-            System.out.println("count: "+count+", Max: "+Max+", Min: "+Min);
 
             if(count < N) Max = mid;
             else Min = mid+1;
