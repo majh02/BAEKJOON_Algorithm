@@ -29,6 +29,7 @@ public class 우선순위큐_11286 {
                 }
             }
             else queue.add(x);
+            System.out.println(queue);
         }
         System.out.println(sb);
     }
