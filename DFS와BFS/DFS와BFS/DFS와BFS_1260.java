@@ -1,5 +1,4 @@
 //1260번_DFS와 BFS
-
 package DFS와BFS;
 
 import java.io.BufferedReader;
@@ -7,14 +6,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-import javax.swing.plaf.TextUI;
-
 public class DFS와BFS_1260{
     public static int N, M, V;
     public static int[] start, end;
     public static boolean visited[] = new boolean[1001];
-    public static int count = 0;
-    public static boolean flag = false;
     public static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -31,59 +26,94 @@ public class DFS와BFS_1260{
             end[i] = Integer.parseInt(st.nextToken());
         }
 
-        DFS(V);
+        visited[V] = true;
+        sb.append(V+" ");
+        DFS(V,1);
+
+        visited = new boolean[1001];
+        visited[V] = true;
+        sb.append("\n"+V+" ");
+        BFS(V,1);
+
         System.out.println(sb);
-
-
     }
 
-    public static void DFS(int value){
-        System.out.println("count: "+count+", value: "+value+", flag: "+flag);
-        if(flag) return;
-        if(count==N) {flag = true; return;}
-        if(count==0){
-            for(int i=1;i<=M;i++){
-                if(V==start[i]){
-                    visited[start[i]] = true;
-                    visited[end[i]] = true;
-                    sb.append(start[i]+" "+end[i]+" ");
-                    count=2;
-                    DFS(end[i]);
-                }
-                else if(V==end[i]){
-                    visited[end[i]] = true;
-                    visited[start[i]] = true;
-                    sb.append(end[i]+" "+start[i]+" ");
-                    count=2;
-                    DFS(start[i]);
-                }
+    public static void DFS(int value, int count){
+        if(count==N) return;
+        int START=Integer.MAX_VALUE;
+        int END = Integer.MAX_VALUE;
+        for(int i=1;i<=M;i++){
+            if(start[i]==value){
+                if(visited[end[i]]) continue;
+                START = value;
+                if(end[i]<END) END = end[i];
             }
-        }
-        else{
-            for(int i=1;i<=M;i++){
-                if(flag) return;
-                if(start[i]==value){
-                    if(!visited[end[i]]){
-                        visited[end[i]] = true;
-                        sb.append(end[i]+" ");
-                        count+=1;
-                        DFS(end[i]);
-                    }
-                }
-                else if(end[i]==value){
-                    if(!visited[start[i]]){
-                        visited[start[i]] = true;
-                        sb.append(start[i]+" ");
-                        count+=1;
-                        DFS(start[i]);
-                    }
-                }
+            else if(end[i]==value&&START!=value){
+                if(visited[start[i]]) continue;
+                END = value;
+                if(start[i]<START) START = start[i];
             }
         }
 
+        if(START==value){
+            if(!visited[END]){
+                visited[END] = true;
+                sb.append(END+" ");
+                DFS(END, count+1);
+            }
+        }
+        else if(END==value){
+            if(!visited[START]){
+                visited[START] = true;
+                sb.append(START+" ");
+                DFS(START, count+1);
+            }
+        }
     }
 
-    public static void BFS(int START, int END){
+    public static void BFS(int value, int count){
+        if(count==N) return;
+        int START=Integer.MAX_VALUE;
+        int END = Integer.MAX_VALUE;
+        int value2 = Integer.MAX_VALUE;
+        for(int i=1;i<=M;i++){
+            if(start[i]==value){
+                if(visited[end[i]]) {
+                    if(end[i]<value2)
+                        value2 = end[i];
+                    continue;
+                }
+                START = value;
+                if(end[i]<END) END = end[i];
+            }
+            else if(end[i]==value&&START!=value){
+                if(visited[start[i]]){
+                    if(start[i]<value2)
+                        value2 = start[i];
+                    continue;
+                }
+                END = value;
+                if(start[i]<START) START = start[i];
+            }
+        }
+        if(START!=value&&END!=value){
+            if(visited[value]&&visited[value2]) return;
+            BFS(value2,count);
+        }
 
+        if(START==value){
+            if(!visited[END]){
+                visited[END] = true;
+                sb.append(END+" ");
+                BFS(value, count+1);
+            }
+        }
+        else if(END==value){
+            if(!visited[START]){
+                visited[START] = true;
+                sb.append(START+" ");
+                BFS(value, count+1);
+            }
+        }
     }
 }
