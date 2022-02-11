@@ -42,6 +42,11 @@ public class DFS와BFS_2206 {
             int Break = queue.peek()[2];
             queue.poll();
 
+            if(x==N && y==M){
+                System.out.println(dist[N][M]+1);
+                return;
+            }
+
             for(int i=0;i<4;i++){
                 int nx = x+dx[i];
                 int ny = y+dy[i];
@@ -52,15 +57,11 @@ public class DFS와BFS_2206 {
                         queue.add(new int[]{nx,ny,Break});
                         dist[nx][ny] = dist[x][y]+1;
                     }
-                    else if(Break==0 && !visited[nx][ny][Break]){
+                    else if(map[nx][ny]==1 && Break==0 && !visited[nx][ny][Break]){
                         visited[nx][ny][1] = true;
                         queue.add(new int[]{nx,ny,1});
                         dist[nx][ny] = dist[x][y]+1;
                     }
-                }
-                if(nx==N && ny==M){
-                    System.out.println(dist[N][M]+1);
-                    return;
                 }
             }
         }
