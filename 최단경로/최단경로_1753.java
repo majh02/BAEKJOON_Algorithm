@@ -1,15 +1,29 @@
-//1753번_최단경로
+//1753번_최단경로 ★★★
+//https://dragon-h.tistory.com/20 참고했음
 package 최단경로;
 
 import java.io.*;
 import java.util.*;
 
-import javax.sound.midi.ShortMessage;
+class Node implements Comparable<Node>{
+    int end, weight;
+
+    public Node(int end, int weight){
+        this.end = end;
+        this.weight = weight;
+    }
+
+    @Override
+    public int compareTo(Node o){
+        return weight-o.weight;
+    }
+}
 
 public class 최단경로_1753 {
     public static int V, E, K;
-    public static int[][] graph;
-    public static int[] visited;
+    public static ArrayList<Node>[] graph;
+    public static boolean[] visited;
+    public static int[] dist;
     public static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,43 +32,51 @@ public class 최단경로_1753 {
         E = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(br.readLine());
 
-        graph = new int[V+1][V+1];
+        graph = (ArrayList[])new ArrayList[V+1];
+        dist = new int[V+1];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        for(int i=1;i<=V;i++){
+            graph[i] = new ArrayList<Node>();
+        }
         for(int i=0;i<E;i++){
             st = new StringTokenizer(br.readLine(), " ");
             int u = Integer.parseInt(st.nextToken());
             int v = Integer.parseInt(st.nextToken());
             int w = Integer.parseInt(st.nextToken());
-            graph[u][v] = w;
+            graph[u].add(new Node(v,w));
         }
 
+        Dijkstra();
         for(int i=1;i<=V;i++){
-            int result = BFS(i)-1;
-
-            if(result==-1) sb.append("INF");
-            else sb.append(result+"\n");
+            if(dist[i]==Integer.MAX_VALUE) sb.append("INF\n");
+            else sb.append(dist[i]+"\n");
         }
 
         System.out.println(sb);
     }
 
-    public static int BFS(int end){
-        Queue<Integer> queue = new LinkedList<>();
-        visited = new int[V+1];
-        queue.add(K);
-        visited[K] = 1;
+    public static void Dijkstra(){
+        PriorityQueue<Node> queue = new PriorityQueue<>();
+        visited = new boolean[V+1];
+        queue.add(new Node(K,0));
+        dist[K] = 0;
 
         while(!queue.isEmpty()){
-            if(visited[end]!=0) return visited[end];
+            Node current_Node = queue.poll();
+            int u = current_Node.end;
 
-            int u = queue.poll();
-            for(int v=1;v<=V;v++){
-                if(graph[u][v]!=0 && visited[v]==0){
-                    queue.add(v);
-                    visited[v] = visited[u]+graph[u][v];
+            if(visited[u]==true) continue;
+            visited[u] = true;
+
+            for(Node node:graph[u]){
+                int v = node.end;
+                int w = node.weight;
+                if(dist[v] > dist[u]+w){
+                    dist[v] = dist[u]+w;
+                    queue.add(new Node(v,dist[v]));
                 }
             }
         }
-        return 0;
     }
     
 }
