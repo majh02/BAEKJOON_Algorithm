@@ -22,8 +22,9 @@ public class 최단경로_1504 {
     public static int N, E;
     public static int v1, v2;
     public static ArrayList<Node>[] graph;
+    public static boolean[] visited;
     public static int[] dist;
-    public static boolean[] visited = new boolean[2];
+    static final int INF = 200000000;
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -31,11 +32,11 @@ public class 최단경로_1504 {
         E = Integer.parseInt(st.nextToken());
 
         graph = (ArrayList[])new ArrayList[N+1];
+        visited = new boolean[N+1];
+        dist = new int[N+1];
         for(int i=1;i<=N;i++){
             graph[i] = new ArrayList<Node>();
         }
-        dist = new int[N+1];
-        Arrays.fill(dist, Integer.MAX_VALUE);
 
         for(int i=0;i<E;i++){
             st = new StringTokenizer(br.readLine(), " ");
@@ -50,43 +51,39 @@ public class 최단경로_1504 {
         v1 = Integer.parseInt(st.nextToken());
         v2 = Integer.parseInt(st.nextToken());
 
-        Dijkstra();
-        if(dist[N]==Integer.MAX_VALUE) System.out.println(-1);
-        else{
-            if(visited[0] && visited[1]) System.out.println(dist[N]);
-            else if(!visited[0] && visited[1]) System.out.println(dist[N]+dist[v1]);
-            else if(visited[0] && !visited[1]) System.out.println(dist[N]+dist[v2]);
-            else System.out.println(dist[N]+dist[v1]+dist[v2]);
-        }
+        int result = Dijkstra(v1, v2);
+        int result1 = Dijkstra(1, v1)+Dijkstra(v2, N)+result;
+        int result2 = Dijkstra(1, v2)+Dijkstra(v1, N)+result;
+        
+        result = (result1>=INF && result2>=INF) ? -1 : Math.min(result1, result2);
+        System.out.println(result);
     }
 
-    public static void Dijkstra(int start){
+    public static int Dijkstra(int start, int end){
         PriorityQueue<Node> queue = new PriorityQueue<>();
+        Arrays.fill(visited, false);
+        Arrays.fill(dist, INF);
         queue.add(new Node(start,0));
         dist[start] = 0;
 
         while(!queue.isEmpty()){
             Node current_Node = queue.poll();
             int u = current_Node.end;
+            
+            if(visited[u]==true) continue;
+            visited[u] = true;
+
             for(Node node : graph[u]){
                 int v = node.end;
                 int w = node.weight;
                 if(dist[v]>dist[u]+w){
-                    if(v==v1 && !visited[0]) visited[0] = true;
-                    else if(v==v1 && visited[0]) visited[0] = false;
-                    else if(v==v2 && !visited[1]) visited[1] = true;
-                    else if(v==v2 && visited[1]) visited[1] = false;
-                    else{
-                        visited[0] = false;
-                        visited[1] = false;
-                    }
-                    dist[v] = dist[u]+v;
+                    dist[v] = dist[u]+w;
                     queue.add(new Node(v,dist[v]));
                 }
             }
 
         }
-
+        return dist[end];
     }
     
 }
