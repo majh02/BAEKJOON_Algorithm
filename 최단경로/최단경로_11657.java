@@ -1,28 +1,23 @@
-//11657번_타임머신
+//11657번_타임머신 - 음수가 있을 경우 벨만포드 알고리즘으로 해결
 package 최단경로;
 
 import java.io.*;
 import java.util.*;
 
-class Node implements Comparable<Node>{
-    int end, weight;
+class City{
+    int end, time;
 
-    public Node(int end, int weight){
+    public City(int end, int time){
         this.end = end;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Node o){
-        return weight-o.weight;
+        this.time = time;
     }
 }
 
 public class 최단경로_11657 {
     public static int N, M;
-    public static ArrayList<Node>[] graph;
+    public static ArrayList<City>[] graph;
     public static int[] visited;
-    public static int[] Time;
+    public static long[] Time;
 
     public static void main(String args[]) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,68 +27,89 @@ public class 최단경로_11657 {
         
         graph = (ArrayList[]) new ArrayList[N+1];
         for(int i=1;i<=N;i++){
-            graph[i] = new ArrayList<Node>();
+            graph[i] = new ArrayList<City>();
         }
         for(int i=0;i<M;i++){
             st = new StringTokenizer(br.readLine(), " ");
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
             int C = Integer.parseInt(st.nextToken());
-            graph[A].add(new Node(B,C));
+            graph[A].add(new City(B,C));
         }
 
         StringBuilder sb = new StringBuilder();
-        for(int i=2;i<=N;i++){
-            int result = Dijkstra(i);
-            if(result==Integer.MIN_VALUE){
-                System.out.println(-1);
-                return;
-            }
-            else if(result==Integer.MAX_VALUE){
-                sb.append(-1).append("\n");
-            }
-            else sb.append(result).append("\n");
+        
+        if(BellmanFord()){
+            System.out.println(-1);
+            return;
         }
-
-        System.out.print(sb);
+        else{
+            for(int i=2;i<=N;i++){
+                if(Time[i]==Long.MAX_VALUE) sb.append(-1).append("\n");
+                else sb.append(Time[i]).append("\n");
+            }
+        }
+        System.out.println(sb);
 
     }
 
-    public static int Dijkstra(int end){
-        PriorityQueue<Node> queue = new PriorityQueue<>();
-        visited = new int[N+1];
-        Time = new int[N+1];
-        Arrays.fill(Time, Integer.MAX_VALUE);
-        
-        queue.add(new Node(1,0));
+    public static boolean BellmanFord(){
+        Time = new long[N+1];
+        Arrays.fill(Time, Long.MAX_VALUE);
         Time[1] = 0;
 
-        int tmp = 0;
-        while(!queue.isEmpty()){
-            Node current_Node = queue.poll();
-            int u = current_Node.end;
+        for(int i=1;i<=N;i++){
+            for(int j=1;j<=N;j++){
+                for(City city : graph[j]){
+                    if(Time[j]==Long.MAX_VALUE) break;
 
-            if(visited[u]==3) continue;
-            visited[u]++;
-
-            for(Node node : graph[u]){
-                int v = node.end;
-                int t = node.weight;
-                if(Time[v] > Time[u]+t){
-                    Time[v] = Time[u]+t;
-                    queue.add(new Node(v,Time[v]));
-                }
-                if(Time[end]<0 && tmp==0){
-                    tmp = Time[end];
-                }
-                else if(Time[end]<0 && Time[end]<tmp){
-                    Time[end] = Integer.MIN_VALUE;
+                    int e = city.end;
+                    int t = city.time;
+                    if(Time[e] > Time[j]+t){
+                        Time[e] = Time[j]+t;
+                        if(i==N) return true;
+                    }
                 }
             }
         }
-        
-        return Time[end];
+        return false;
     }
+
+    // public static int Dijkstra(int end){
+    //     PriorityQueue<Node> queue = new PriorityQueue<>();
+    //     visited = new int[N+1];
+    //     Time = new int[N+1];
+    //     Arrays.fill(Time, Integer.MAX_VALUE);
+        
+    //     queue.add(new Node(1,0));
+    //     Time[1] = 0;
+
+    //     int tmp = 0;
+    //     while(!queue.isEmpty()){
+    //         Node current_Node = queue.poll();
+    //         int u = current_Node.end;
+
+    //         if(visited[u]==3) continue;
+    //         visited[u]++;
+
+    //         for(Node node : graph[u]){
+    //             int v = node.end;
+    //             int t = node.weight;
+    //             if(Time[v] > Time[u]+t){
+    //                 Time[v] = Time[u]+t;
+    //                 queue.add(new Node(v,Time[v]));
+    //             }
+    //             if(Time[end]<0 && tmp==0){
+    //                 tmp = Time[end];
+    //             }
+    //             else if(Time[end]<0 && Time[end]<tmp){
+    //                 Time[end] = Integer.MIN_VALUE;
+    //             }
+    //         }
+    //     }
+        
+    //     return Time[end];
+    // }
 
     
 }
