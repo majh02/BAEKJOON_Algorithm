@@ -19,7 +19,7 @@ public class 정수론및조합론_9375 {
             n[i] = Integer.parseInt(br.readLine());
             for(int j=0;j<n[i];j++){
                 st = new StringTokenizer(br.readLine()," ");
-                String outfit = st.nextToken();
+                st.nextToken();
                 String type = st.nextToken();
                 for(int k=0;k<Type_count;k++){
                     if(type.equals(Types_Of_Outfit[i][k])) {
