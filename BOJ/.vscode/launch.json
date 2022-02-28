@@ -1,0 +1,280 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_11399",
+            "request": "launch",
+            "mainClass": "그리디알고리즘.그리디알고리즘_11399",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_13305",
+            "request": "launch",
+            "mainClass": "그리디알고리즘.그리디알고리즘_13305",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_1541",
+            "request": "launch",
+            "mainClass": "그리디알고리즘.그리디알고리즘_1541",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_1931",
+            "request": "launch",
+            "mainClass": "그리디알고리즘.그리디알고리즘_1931",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_10830",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_10830",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_11401",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_11401",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_11444",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_11444",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1629",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_1629",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1780번",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_1780번",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1992",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_1992",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_2630",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_2630",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_2740",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_2740",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_6549",
+            "request": "launch",
+            "mainClass": "분할정복.분할정복_6549",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_10773",
+            "request": "launch",
+            "mainClass": "스택.스택_10773",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_10828",
+            "request": "launch",
+            "mainClass": "스택.스택_10828",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_17298",
+            "request": "launch",
+            "mainClass": "스택.스택_17298",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_1874",
+            "request": "launch",
+            "mainClass": "스택.스택_1874",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_4949",
+            "request": "launch",
+            "mainClass": "스택.스택_4949",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_9012",
+            "request": "launch",
+            "mainClass": "스택.스택_9012",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_1920",
+            "request": "launch",
+            "mainClass": "이분탐색.이분탐색_1920",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1010",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_1010",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1037",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_1037",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_11051",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_11051",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1676",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_1676",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1934",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_1934",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2004",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_2004",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2609",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_2609",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2981",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_2981",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_3036",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_3036",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_5086",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_5086",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_9375",
+            "request": "launch",
+            "mainClass": "정수론및조합론.정수론및조합론_9375",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_1021",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_1021",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_10866",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_10866",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_11866",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_11866",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_18258",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_18258",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_1966",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_1966",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_2164",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_2164",
+            "projectName": "백준 알고리즘_c513e22f"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_5430",
+            "request": "launch",
+            "mainClass": "큐덱.큐덱_5430",
+            "projectName": "백준 알고리즘_c513e22f"
+        }
+    ]
+}
