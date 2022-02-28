@@ -1,5 +1,4 @@
-package 프로그래머스_스택큐;
-
+//스택큐_1번_기능개발
 import java.io.*;
 import java.util.*;
 
