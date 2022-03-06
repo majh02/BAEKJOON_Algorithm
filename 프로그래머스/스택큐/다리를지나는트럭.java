@@ -5,7 +5,7 @@ import java.util.*;
 public class 다리를지나는트럭{
     public static void main(String args[]) throws IOException{
         //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int bridge_length = 100;
+        int bridge_length = 10000;
         int weight = 100;
         int[] truck_weights = {10,10,10,10,10,10,10,10,10,10};
 
