@@ -4,31 +4,42 @@ import java.util.*;
 
 public class 다리를지나는트럭{
     public static void main(String args[]) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int brige_length = Integer.parseInt(br.readLine());
-        int weight = Integer.parseInt(br.readLine());
-        int[] truck_weights = {7,4,5,6};
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int bridge_length = 100;
+        int weight = 100;
+        int[] truck_weights = {10,10,10,10,10,10,10,10,10,10};
 
-
+        System.out.println(solution(bridge_length, weight, truck_weights));
     }
 
     public static int solution(int bridge_length, int weight, int[] truck_weights) {
-        // Queue<Integer> queue = new LinkedList<>();
-        // for(int i=0;i<truck_weights.length;i++){
-        //     queue.add(e)
-        // }
+        Queue<int[]> queue = new LinkedList<>();
+        for(int i:truck_weights){
+            queue.add(new int[]{i,0});
+        }
         int answer = 0;
-        int sum_of_truck_weight = 0;
-        int num_of_truck = 0;
-        for(int i=0;i<truck_weights.length;i++){
-            if(sum_of_truck_weight+truck_weights[i]<=weight && num_of_truck+1 <= bridge_length){
-                sum_of_truck_weight+=truck_weights[i];
-                num_of_truck++;
+        int weight_on_bridge = 0;
+        int num_of_crossed_truck = 0;
+
+        while(num_of_crossed_truck<truck_weights.length){
+            for(int[] truck:queue){
+                if(truck[1]==bridge_length){
+                    weight_on_bridge-=truck[0];
+                    num_of_crossed_truck++;
+                    truck[1]++;
+                    continue;
+                }
+                else if(truck[1]>0 && truck[1]<bridge_length){
+                    truck[1]++;
+                }
+                
+                if(truck[1]==0 && weight_on_bridge+truck[0]<=weight){
+                    weight_on_bridge+=truck[0];
+                    truck[1]++;
+                    break;
+                }
             }
-            else{
-                sum_of_truck_weight=0;
-                answer+=
-            }
+            answer++;
         }
         return answer;
     }
