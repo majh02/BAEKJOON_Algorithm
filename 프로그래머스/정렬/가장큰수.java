@@ -1,4 +1,5 @@
 //정렬_2번_가장큰수
+//https://ivory-room.tistory.com/43 참고했음
 import java.io.*;
 import java.util.*;
 
@@ -17,27 +18,18 @@ public class 가장큰수 {
             tmp[i] = Integer.toString(numbers[i]);
         }
 
-        for(int i=0;i<tmp.length;i++){
-            for(int j=i+1;j<tmp.length;j++){
-                if(tmp[i].substring(0,1).equals(tmp[j].substring(0,1))){
-                    if(tmp[i].substring(tmp[i].length()-1).compareTo(tmp[j].substring(tmp[j].length()-1))>0){
-                        String temp = tmp[i];
-                        tmp[i] = tmp[j];
-                        tmp[j] = temp;
-                    }
-                }
-                else if(tmp[i].compareTo(tmp[j])>0){
-                    String temp = tmp[i];
-                    tmp[i] = tmp[j];
-                    tmp[j] = temp;
-                }
+        Arrays.sort(tmp, new Comparator<String>() {
+            @Override
+            public int compare(String a, String b) {
+                return (b+a).compareTo(a+b);
             }
-        }
+        });
 
-        System.out.println(Arrays.toString(tmp));
+        // System.out.println(Arrays.toString(tmp));
 
-        for(int i=tmp.length-1;i>=0;i--){
-            answer = answer.concat(tmp[i]);
+        if(tmp[0].equals("0")) return "0";
+        for(String i : tmp){
+            answer += i;
         }
         return answer;
     }
