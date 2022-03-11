@@ -1,5 +1,5 @@
 //DFS,BFS_1번_타겟넘버
-import java.util.*;
+//https://fbtmdwhd33.tistory.com/237 참고했음
 
 public class 타겟넘버 {
     public static void main(String args[]){
@@ -26,5 +26,4 @@ public class 타겟넘버 {
         DFS(numbers, target, i+1, sum+numbers[i]);
         DFS(numbers, target, i+1, sum-numbers[i]);
     }
-    
 }
