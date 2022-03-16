@@ -1,3 +1,6 @@
+//동적계획법_1번_N으로 표현
+//https://small-stap.tistory.com/65 참고했음
+
 package 프로그래머스.동적계획법;
 
 import java.util.*;
@@ -11,13 +14,12 @@ public class N으로표현 {
     }
 
     public static int solution(int N, int number) {
-        int answer = 0;
+        int answer = -1;
         ArrayList<Set<Integer>> dp = new ArrayList<>();
         for(int i=0;i<9;i++){
             dp.add(new HashSet<>());
         }
         dp.get(1).add(N);
-        System.out.println(dp.get(1));
 
         for(int i=2;i<9;i++){
             Set<Integer> countSet = dp.get(i);
@@ -37,16 +39,15 @@ public class N으로표현 {
                 }
             }
             countSet.add(Integer.parseInt(String.valueOf(N).repeat(i)));
-
-            System.out.println(countSet);
             if(countSet.contains(number)){
-                answer = i;
                 break;
             }
         }
-
-        if(answer==0) answer=-1;
-
+        
+        for(Set<Integer> sub : dp){
+            if(sub.contains(number))
+                return dp.indexOf(sub);
+        }
         return answer;
 
     }
