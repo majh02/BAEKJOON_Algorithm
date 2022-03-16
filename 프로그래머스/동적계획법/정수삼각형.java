@@ -1,9 +1,9 @@
 //동적계획법_2번_정수삼각형
+//https://velog.io/@devsh/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A0%95%EC%88%98-%EC%82%BC%EA%B0%81%ED%98%95-with-Java 참고했음
 
 package 프로그래머스.동적계획법;
 
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public class 정수삼각형 {
     public static void main(String args[]){
