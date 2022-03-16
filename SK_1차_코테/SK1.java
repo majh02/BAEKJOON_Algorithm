@@ -1,4 +1,4 @@
-package 프로그래머스;
+package SK_1차_코테;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

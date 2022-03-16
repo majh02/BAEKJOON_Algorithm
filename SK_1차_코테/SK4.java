@@ -2,8 +2,6 @@ package SK_1차_코테;
 
 import java.util.*;
 
-import javax.xml.namespace.QName;
-
 public class SK4 {
     public static void main(String args[]){
         int n = 5;
