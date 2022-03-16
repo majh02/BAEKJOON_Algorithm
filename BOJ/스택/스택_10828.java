@@ -1,5 +1,5 @@
 //10828번_스택
-package 스택;
+package BOJ.스택;
 
 import java.util.Stack;
 import java.util.StringTokenizer;

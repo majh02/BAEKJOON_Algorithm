@@ -1,5 +1,5 @@
 //7562번_나이트의 이동
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.*;
 import java.util.*;

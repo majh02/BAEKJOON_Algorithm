@@ -1,5 +1,5 @@
 //1707번_이분 그래프
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.*;
 import java.util.*;

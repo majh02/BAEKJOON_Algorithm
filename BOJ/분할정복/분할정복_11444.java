@@ -1,7 +1,7 @@
 //11444번_피보나치수6
 //{1 1}n = [Fn+1  Fn ]
 //{1 0}  = [ Fn  Fn-1]
-package 분할정복;
+package BOJ.분할정복;
 
 import java.io.BufferedReader;
 import java.io.IOException;

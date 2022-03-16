@@ -1,5 +1,5 @@
 //1520번_내리막 길★★★
-package 동적계획법2;
+package BOJ.동적계획법2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

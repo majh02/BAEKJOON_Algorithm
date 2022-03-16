@@ -1,5 +1,5 @@
 //2667번_단지번호붙이기
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

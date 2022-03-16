@@ -1,5 +1,5 @@
 //1780번_종이의 개수
-package 분할정복;
+package BOJ.분할정복;
 
 import java.io.BufferedReader;
 import java.io.IOException;

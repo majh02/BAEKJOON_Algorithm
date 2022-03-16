@@ -1,4 +1,6 @@
 //완전탐색_1번_모의고사
+package 프로그래머스.완전탐색;
+
 import java.util.*;
 
 public class 모의고사 {

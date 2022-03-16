@@ -1,5 +1,5 @@
 //2178번_미로탐색 (DFS로 할 경우 시간초과 -> BFS로 풀어야함)
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

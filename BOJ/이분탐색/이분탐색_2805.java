@@ -1,5 +1,5 @@
 //2805번_나무 자르기
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

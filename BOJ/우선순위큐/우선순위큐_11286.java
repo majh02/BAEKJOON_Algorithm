@@ -1,6 +1,6 @@
 //11286번_절댓값 힙
 //https://dragon-h.tistory.com/5 참고했음
-package 우선순위큐;
+package BOJ.우선순위큐;
 
 import java.io.BufferedReader;
 import java.io.IOException;

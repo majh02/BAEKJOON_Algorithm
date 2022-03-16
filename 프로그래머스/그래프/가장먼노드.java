@@ -1,7 +1,7 @@
 //그래프_1번_가장 먼 노드
-import java.util.*;
+package 프로그래머스.그래프;
 
-import javax.management.Query;
+import java.util.*;
 
 public class 가장먼노드 {
     public static void main(String args[]){

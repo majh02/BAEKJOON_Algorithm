@@ -1,5 +1,5 @@
 //1956번_운동
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

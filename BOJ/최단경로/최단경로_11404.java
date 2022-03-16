@@ -1,6 +1,6 @@
 //11404번_플로이드 - 플로이드워셜 알고리즘 사용
 //https://sskl660.tistory.com/61 참고했음
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

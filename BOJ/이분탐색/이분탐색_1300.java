@@ -1,6 +1,6 @@
 //1300번_K번째 수
 //https://st-lab.tistory.com/281 참고함
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

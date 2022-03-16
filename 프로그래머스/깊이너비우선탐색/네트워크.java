@@ -1,4 +1,5 @@
 //DFS,BFS_2번_네트워크
+package 프로그래머스.깊이너비우선탐색;
 
 public class 네트워크 {
     public static void main(String args[]){

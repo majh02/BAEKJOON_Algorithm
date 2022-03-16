@@ -1,5 +1,5 @@
 //2110번_공유기 설치
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,5 +1,5 @@
 //1966번_프린터 큐
-package 큐덱;
+package BOJ.큐덱;
 
 import java.io.BufferedReader;
 import java.io.IOException;

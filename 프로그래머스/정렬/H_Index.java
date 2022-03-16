@@ -1,5 +1,7 @@
 //정렬_3번_H-Index
 //https://ju-nam2.tistory.com/74 참고했음
+package 프로그래머스.정렬;
+
 import java.io.*;
 import java.util.*;
 

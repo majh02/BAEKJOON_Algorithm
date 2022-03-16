@@ -1,4 +1,6 @@
 //완전탐색_2번_소수 찾기
+package 프로그래머스.완전탐색;
+
 import java.util.*;
 
 public class 소수찾기 {

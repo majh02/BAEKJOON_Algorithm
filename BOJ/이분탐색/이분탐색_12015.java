@@ -1,5 +1,5 @@
 //12015번_가장 긴 증가하는 부분 수열2
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

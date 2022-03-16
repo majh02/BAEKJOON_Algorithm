@@ -1,6 +1,6 @@
 //1260번_DFS와 BFS
 //https://m.blog.naver.com/lm040466/221787478911 참고했음
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

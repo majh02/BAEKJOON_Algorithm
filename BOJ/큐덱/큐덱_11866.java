@@ -1,5 +1,5 @@
 //11866번_요세푸스 문제0
-package 큐덱;
+package BOJ.큐덱;
 
 import java.io.BufferedReader;
 import java.io.IOException;

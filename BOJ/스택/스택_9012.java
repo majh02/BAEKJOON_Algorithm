@@ -1,5 +1,5 @@
 //9012번_괄호
-package 스택;
+package BOJ.스택;
 
 import java.io.BufferedReader;
 import java.io.IOException;

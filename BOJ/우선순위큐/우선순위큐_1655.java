@@ -1,6 +1,6 @@
 //1655번_가운데를 말해요
 //https://gh402.tistory.com/32 참고했음
-package 우선순위큐;
+package BOJ.우선순위큐;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,6 @@
 //완전탐색_3번_카펫
+package 프로그래머스.완전탐색;
+
 import java.util.*;
 
 public class 카펫 {

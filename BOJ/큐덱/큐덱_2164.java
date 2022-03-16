@@ -1,5 +1,5 @@
 //2164번_카드2
-package 큐덱;
+package BOJ.큐덱;
 
 import java.io.BufferedReader;
 import java.io.IOException;

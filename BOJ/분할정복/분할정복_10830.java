@@ -1,6 +1,6 @@
 //10830번_행렬제곱
 //https://st-lab.tistory.com/251 참고했음
-package 분할정복;
+package BOJ.분할정복;
 
 import java.io.BufferedReader;
 import java.io.IOException;

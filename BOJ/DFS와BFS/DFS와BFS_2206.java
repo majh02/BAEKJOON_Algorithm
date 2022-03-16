@@ -1,5 +1,5 @@
 //2206번_벽 부수고 이동하기
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.*;
 import java.util.*;

@@ -1,5 +1,5 @@
 //9370번_미확인 도착지
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

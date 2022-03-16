@@ -1,4 +1,6 @@
 //해시_3번_위장
+package 프로그래머스.해시;
+
 import java.util.*;
 
 public class 위장 {

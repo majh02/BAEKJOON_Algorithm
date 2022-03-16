@@ -1,5 +1,5 @@
 //1927번_최소 힙
-package 우선순위큐;
+package BOJ.우선순위큐;
 
 import java.io.BufferedReader;
 import java.io.IOException;

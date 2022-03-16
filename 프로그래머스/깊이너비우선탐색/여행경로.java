@@ -1,5 +1,7 @@
 //DFS,BFS_4번_여행경로
 //https://velog.io/@rari_1110/DFS-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C-JAVA 참고했음
+package 프로그래머스.깊이너비우선탐색;
+
 import java.util.*;
 
 public class 여행경로 {

@@ -1,4 +1,6 @@
 //스택큐_3번_다리를지나는트럭
+package 프로그래머스.스택큐;
+
 import java.io.*;
 import java.util.*;
 

@@ -1,5 +1,5 @@
 //11657번_타임머신 - 음수가 있을 경우 벨만포드 알고리즘으로 해결
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

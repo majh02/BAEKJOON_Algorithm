@@ -1,5 +1,5 @@
 //2606번_바이러스
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,6 @@
 //DFS,BFS_3번_단어 변환
+package 프로그래머스.깊이너비우선탐색;
+
 import java.util.*;
 
 public class 단어변환 {

@@ -1,4 +1,6 @@
 //스택큐_4번_주식가격
+package 프로그래머스.스택큐;
+
 import java.io.*;
 import java.util.*;
 

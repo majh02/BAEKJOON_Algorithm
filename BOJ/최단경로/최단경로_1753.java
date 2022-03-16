@@ -1,6 +1,6 @@
 //1753번_최단경로 ★★★
 //https://dragon-h.tistory.com/20 참고했음
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

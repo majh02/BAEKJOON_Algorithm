@@ -1,5 +1,5 @@
 //1021번_회전하는 큐
-package 큐덱;
+package BOJ.큐덱;
 
 import java.io.BufferedReader;
 import java.io.IOException;

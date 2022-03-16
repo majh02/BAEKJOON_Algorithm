@@ -1,4 +1,6 @@
 //힙_1번_더 맵게
+package 프로그래머스.힙;
+
 import java.util.*;
 
 public class 더맵게 {

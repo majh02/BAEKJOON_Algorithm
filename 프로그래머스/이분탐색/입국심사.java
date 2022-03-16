@@ -1,4 +1,6 @@
 //이분탐색_1번_입국심사
+package 프로그래머스.이분탐색;
+
 import java.util.*;
 
 public class 입국심사 {

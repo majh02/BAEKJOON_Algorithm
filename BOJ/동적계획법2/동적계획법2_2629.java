@@ -1,6 +1,6 @@
 //2629번_양팔저울★★★★★
 //https://arinnh.tistory.com/4 참고했음
-package 동적계획법2;
+package BOJ.동적계획법2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

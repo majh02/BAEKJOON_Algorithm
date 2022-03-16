@@ -1,6 +1,6 @@
 //10816번_숫자카드2
 //https://yhwan.tistory.com/10 참고했음
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

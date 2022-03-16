@@ -1,5 +1,5 @@
 //4949번_균형잡힌 세상
-package 스택;
+package BOJ.스택;
 
 import java.io.BufferedReader;
 import java.io.IOException;

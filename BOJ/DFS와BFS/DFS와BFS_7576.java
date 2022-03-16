@@ -1,5 +1,5 @@
 //7576번_토마토
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

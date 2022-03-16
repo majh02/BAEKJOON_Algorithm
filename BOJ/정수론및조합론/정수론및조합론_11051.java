@@ -1,5 +1,5 @@
 //11050번_이항계수1
-package 정수론및조합론;
+package BOJ.정수론및조합론;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

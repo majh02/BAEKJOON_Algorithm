@@ -1,7 +1,7 @@
 //11066번_파일 합치기★★★★★
 //https://guy-who-writes-sourcecode.tistory.com/43 참고했음
 
-package 동적계획법2;
+package BOJ.동적계획법2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,5 +1,5 @@
 //10942번_펠린드롬?
-package 동적계획법2;
+package BOJ.동적계획법2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

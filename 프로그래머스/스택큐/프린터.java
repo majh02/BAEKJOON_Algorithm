@@ -1,4 +1,6 @@
 //스택큐_2번_프린터
+package 프로그래머스.스택큐;
+
 import java.io.*;
 import java.util.*;
 

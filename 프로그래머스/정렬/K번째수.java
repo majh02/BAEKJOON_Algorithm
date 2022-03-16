@@ -1,4 +1,6 @@
 //정렬_1번_K번째수
+package 프로그래머스.정렬;
+
 import java.io.*;
 import java.util.*;
 

@@ -1,5 +1,7 @@
 //해시_4번_베스트앨범
 //https://junghn.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%95%A8%EB%B2%94-%ED%95%B4%EC%8B%9C 참고했음
+package 프로그래머스.해시;
+
 import java.util.*;
 
 public class 베스트앨범 {

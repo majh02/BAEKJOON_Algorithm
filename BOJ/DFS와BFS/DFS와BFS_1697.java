@@ -1,5 +1,5 @@
 //1697번_숨바꼭질
-package DFS와BFS;
+package BOJ.DFS와BFS;
 
 import java.io.*;
 import java.util.*;

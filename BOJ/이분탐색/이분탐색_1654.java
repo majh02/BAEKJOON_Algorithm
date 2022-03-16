@@ -1,5 +1,5 @@
 //1654번_랜선 자르기
-package 이분탐색;
+package BOJ.이분탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;

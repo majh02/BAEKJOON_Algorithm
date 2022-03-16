@@ -1,4 +1,6 @@
 //힙_2번_디스크 컨트롤러
+package 프로그래머스.힙;
+
 import java.util.*;
 
 public class 디스크컨트롤러 {

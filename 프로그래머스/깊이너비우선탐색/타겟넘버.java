@@ -1,5 +1,6 @@
 //DFS,BFS_1번_타겟넘버
 //https://fbtmdwhd33.tistory.com/237 참고했음
+package 프로그래머스.깊이너비우선탐색;
 
 public class 타겟넘버 {
     public static void main(String args[]){

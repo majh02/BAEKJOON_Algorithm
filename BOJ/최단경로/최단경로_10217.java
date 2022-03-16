@@ -1,6 +1,6 @@
 //10217번_KCM Travel
 //https://velog.io/@jini_eun/%EB%B0%B1%EC%A4%80-10217%EB%B2%88-KCM-Travel-Java-Python 참고했음
-package 최단경로;
+package BOJ.최단경로;
 
 import java.io.*;
 import java.util.*;

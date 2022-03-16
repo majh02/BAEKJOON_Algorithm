@@ -1,5 +1,5 @@
 //17298번_오큰수
-package 스택;
+package BOJ.스택;
 
 import java.io.BufferedReader;
 import java.io.IOException;

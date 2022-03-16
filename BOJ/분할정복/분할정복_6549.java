@@ -1,6 +1,6 @@
 //6549번_히스토그램에서 가장 큰 직사각형
 //https://st-lab.tistory.com/255 참고했음
-package 분할정복;
+package BOJ.분할정복;
 
 import java.io.BufferedReader;
 import java.io.IOException;

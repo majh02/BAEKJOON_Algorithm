@@ -1,5 +1,5 @@
 //2609번 최대공약수와 최소공배수
-package 정수론및조합론;
+package BOJ.정수론및조합론;
 
 import java.io.BufferedReader;
 import java.io.IOException;

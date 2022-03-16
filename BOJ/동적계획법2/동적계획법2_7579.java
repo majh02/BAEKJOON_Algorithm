@@ -1,6 +1,6 @@
 //7579번_앱
 //https://dragon-h.tistory.com/9 참고했음
-package 동적계획법2;
+package BOJ.동적계획법2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

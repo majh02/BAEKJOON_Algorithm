@@ -1,7 +1,7 @@
 //11401번_이항계수3
 //nCk = n!/(k!(n-k)!) (k!=0,k!=n)
 //https://st-lab.tistory.com/241 참고했음
-package 분할정복;
+package BOJ.분할정복;
 
 import java.io.BufferedReader;
 import java.io.IOException;
