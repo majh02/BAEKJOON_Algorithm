@@ -1,8 +1,6 @@
 package SK_1차_코테;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+
+import java.util.*;
 
 public class SK1 {
     public static void main(String args[]){
