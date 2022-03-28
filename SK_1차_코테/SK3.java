@@ -12,6 +12,24 @@ public class SK3 {
 
     public static int solution(int width, int height, int[][] diagonals) {
         int answer = 0;
+        int[][][] dp = new int[height+2][width+2][2];
+        long[][] dist = new long[height+2][width+2];
+
+        for(int i=0;i<=height+1;i++){
+            Arrays.fill(dist[i], Integer.MAX_VALUE);
+        }
+        for(int[] diag : diagonals){
+            int x = diag[0];
+            int y = height-diag[1];
+            dist[y][x] = -1;
+            dist[y+1][x+1] = -1;
+        }
+        dp[height][1][0] = 1;
+        for(int i=height;i>=0;i--){
+            for(int j=1;j<=width+1;j++){
+                
+            }
+        }
 
         
 

@@ -1,4 +1,5 @@
 //힙_2번_디스크 컨트롤러
+//https://maetdori.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC-JAVA 참고했음
 package 프로그래머스.힙;
 
 import java.util.*;
@@ -11,55 +12,36 @@ public class 디스크컨트롤러 {
 
     public static int solution(int[][] jobs) {
         int answer = 0;
-        Arrays.sort(jobs,(o1,o2)->o1[0]-o2[0]);
-        PriorityQueue<int[]> queue = new PriorityQueue<>((o1,o2)->{
-            return o1[1] - o2[1];
+        Arrays.sort(jobs, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] arr1, int[] arr2){
+                if(arr1[0]==arr2[0])
+                    return arr1[1]-arr2[1];
+                return arr1[0]-arr2[0];
+            }
+            
         });
-        for(int i=0;i<jobs.length;i++){
-            queue.add(new int[]{jobs[i][0], jobs[i][1]});
-        }
+        PriorityQueue<int[]> queue = new PriorityQueue<>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] arr1, int[] arr2){
+                return arr1[1]-arr2[1];
+            }
+        });
 
-        int time = 0;
+        queue.add(jobs[0]);
+        int time = jobs[0][0];
+        int index = 1;
         while(!queue.isEmpty()){
-            if(answer==0){
-                int[] system = queue.poll();
-                time+=system[0]+system[1];
-                answer+=system[1];
-            }
-            else if(queue.size()<2){
-                int[] system = queue.poll();
-                answer+=time-system[0]+system[1];
-                time+= system[1];
-            }
-            else{
-                int[] system1 = queue.poll();
-                int[] system2 = queue.poll();
-                if(system1[0]>time){
-                    time=system1[0];
+            int[] current = queue.poll();
+            time +=current[1];
+            answer+=time-current[0];
 
-                }
-                if(system2[0]>time){
-                    answer+=time-system1[0]+system1[1];
-                    time+= system1[1];
-                    queue.add(system2);
-                    continue;
-                }
-                int sys1_time = time-system1[0]+system1[1];
-                int sys2_time = time-system2[0]+system2[1];
-                if(sys1_time<sys2_time){
-                    queue.add(system2);
-                    time+=system1[1];
-                    answer+=sys1_time;
-                }
-                else{
-                    queue.add(system1);
-                    time+=system2[1];
-                    answer+=sys2_time;
-                }
+            while(index<jobs.length && jobs[index][0]<=time){
+                queue.add(jobs[index++]);
             }
-            System.out.println(answer);
-            for(int[] i : queue){
-                System.out.println(i[0]+", "+i[1]);
+            if(index<jobs.length && queue.isEmpty()){
+                time = jobs[index][0];
+                queue.add(jobs[index++]);
             }
         }
 
