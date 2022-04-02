@@ -1,4 +1,4 @@
-package 자료구조;
+package 자료구조.KOH_알고리즘;
 
 import java.util.Scanner;
 
@@ -26,6 +26,8 @@ public class prob2 {
             return true;
         }
 
+        maze[x][y] = 1;
+
         for(int i=0;i<4;i++){
             int nx = x+dx[i];
             int ny = y+dy[i];
@@ -37,11 +39,7 @@ public class prob2 {
                 else continue;
             }
 
-            int value = maze[nx][ny];
-            maze[nx][ny] = 1;
             boolean flag = escape_maze(N, maze, K, nx, ny, bomb);
-            maze[nx][ny] = value;
-
             if(flag) return true;
         }
         return false;

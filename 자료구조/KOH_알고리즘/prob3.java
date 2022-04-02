@@ -1,4 +1,4 @@
-package 자료구조;
+package 자료구조.KOH_알고리즘;
 
 import java.util.*;
 
