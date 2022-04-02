@@ -31,13 +31,13 @@ public class prob3 {
         if(x<0 || y<0 || x>=N || y>=N) return false;
         if(x==N-1 && y==N-1) return true;
 
+        maze[x][y] = 2;
+
         boolean flag = false;
         int nx = x+dx[dir];
         int ny = y+dy[dir];
         if((nx>=0 && ny>=0 && nx<N && ny<N) && maze[nx][ny]==0){
-            maze[nx][ny] = 1;
             flag = escape_maze(N, maze, nx, ny, dir);
-            maze[nx][ny] = 0;
         }
         else{
             for(int i=0;i<4;i++){
@@ -45,13 +45,10 @@ public class prob3 {
                 nx = x+dx[i];
                 ny = y+dy[i];
                 if(nx<0 || ny<0 || nx>=N || ny>=N) continue;
-                if(maze[nx][ny]==1) continue;
+                if(maze[nx][ny]!=0) continue;
                 
-                maze[nx][ny] = 1;
                 count++;
                 flag = escape_maze(N, maze, nx, ny, i);
-                maze[nx][ny] = 0;
-
                 if(flag) return true;
             }
         }
