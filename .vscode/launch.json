@@ -1,0 +1,784 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_1012",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_1012",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_1260",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_1260",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_1697",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_1697",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_1707",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_1707",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_2178",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_2178",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_2206",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_2206",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_2606",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_2606",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_2667",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_2667",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_7562",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_7562",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_7569",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_7569",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS와BFS_7576",
+            "request": "launch",
+            "mainClass": "BOJ.DFS와BFS.DFS와BFS_7576",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_11399",
+            "request": "launch",
+            "mainClass": "BOJ.그리디알고리즘.그리디알고리즘_11399",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_13305",
+            "request": "launch",
+            "mainClass": "BOJ.그리디알고리즘.그리디알고리즘_13305",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_1541",
+            "request": "launch",
+            "mainClass": "BOJ.그리디알고리즘.그리디알고리즘_1541",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 그리디알고리즘_1931",
+            "request": "launch",
+            "mainClass": "BOJ.그리디알고리즘.그리디알고리즘_1931",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_10942",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_10942",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_11049",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_11049",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_11066",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_11066",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_1520",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_1520",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_2293",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_2293",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_2629",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_2629",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 동적계획법2_7579",
+            "request": "launch",
+            "mainClass": "BOJ.동적계획법2.동적계획법2_7579",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_10830",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_10830",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_11401",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_11401",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_11444",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_11444",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1629",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_1629",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1780번",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_1780번",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_1992",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_1992",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_2630",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_2630",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_2740",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_2740",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 분할정복_6549",
+            "request": "launch",
+            "mainClass": "BOJ.분할정복.분할정복_6549",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_10773",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_10773",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_10828",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_10828",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_17298",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_17298",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_1874",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_1874",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_4949",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_4949",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택_9012",
+            "request": "launch",
+            "mainClass": "BOJ.스택.스택_9012",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 우선순위큐_11279",
+            "request": "launch",
+            "mainClass": "BOJ.우선순위큐.우선순위큐_11279",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 우선순위큐_11286",
+            "request": "launch",
+            "mainClass": "BOJ.우선순위큐.우선순위큐_11286",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 우선순위큐_1655",
+            "request": "launch",
+            "mainClass": "BOJ.우선순위큐.우선순위큐_1655",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 우선순위큐_1927",
+            "request": "launch",
+            "mainClass": "BOJ.우선순위큐.우선순위큐_1927",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_10816",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_10816",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_12015",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_12015",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_1300",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_1300",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_1654",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_1654",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_1920",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_1920",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_2110",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_2110",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이분탐색_2805",
+            "request": "launch",
+            "mainClass": "BOJ.이분탐색.이분탐색_2805",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1010",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_1010",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1037",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_1037",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_11051",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_11051",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1676",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_1676",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_1934",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_1934",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2004",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_2004",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2609",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_2609",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_2981",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_2981",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_3036",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_3036",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_5086",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_5086",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수론및조합론_9375",
+            "request": "launch",
+            "mainClass": "BOJ.정수론및조합론.정수론및조합론_9375",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_10217",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_10217",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_11404",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_11404",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_11657",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_11657",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_1504",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_1504",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_1956",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_1956",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 최단경로_9370",
+            "request": "launch",
+            "mainClass": "BOJ.최단경로.최단경로_9370",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_1021",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_1021",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_10866",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_10866",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_11866",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_11866",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_18258",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_18258",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_1966",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_1966",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_2164",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_2164",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 큐덱_5430",
+            "request": "launch",
+            "mainClass": "BOJ.큐덱.큐덱_5430",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch SK1",
+            "request": "launch",
+            "mainClass": "SK_1차_코테.SK1",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch SK2",
+            "request": "launch",
+            "mainClass": "SK_1차_코테.SK2",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch SK3",
+            "request": "launch",
+            "mainClass": "SK_1차_코테.SK3",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch SK4",
+            "request": "launch",
+            "mainClass": "SK_1차_코테.SK4",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch prob1",
+            "request": "launch",
+            "mainClass": "자료구조.KOH_알고리즘.prob1",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch prob2",
+            "request": "launch",
+            "mainClass": "자료구조.KOH_알고리즘.prob2",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch prob3",
+            "request": "launch",
+            "mainClass": "자료구조.KOH_알고리즘.prob3",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 가장먼노드",
+            "request": "launch",
+            "mainClass": "프로그래머스.그래프.가장먼노드",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 방의개수",
+            "request": "launch",
+            "mainClass": "프로그래머스.그래프.방의개수",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 순위",
+            "request": "launch",
+            "mainClass": "프로그래머스.그래프.순위",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 네트워크",
+            "request": "launch",
+            "mainClass": "프로그래머스.깊이너비우선탐색.네트워크",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 단어변환",
+            "request": "launch",
+            "mainClass": "프로그래머스.깊이너비우선탐색.단어변환",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 여행경로",
+            "request": "launch",
+            "mainClass": "프로그래머스.깊이너비우선탐색.여행경로",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 타겟넘버",
+            "request": "launch",
+            "mainClass": "프로그래머스.깊이너비우선탐색.타겟넘버",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch N으로표현",
+            "request": "launch",
+            "mainClass": "프로그래머스.동적계획법.N으로표현",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 도둑질",
+            "request": "launch",
+            "mainClass": "프로그래머스.동적계획법.도둑질",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 등굣길",
+            "request": "launch",
+            "mainClass": "프로그래머스.동적계획법.등굣길",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정수삼각형",
+            "request": "launch",
+            "mainClass": "프로그래머스.동적계획법.정수삼각형",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 기능개발",
+            "request": "launch",
+            "mainClass": "프로그래머스.스택큐.기능개발",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 다리를지나는트럭",
+            "request": "launch",
+            "mainClass": "프로그래머스.스택큐.다리를지나는트럭",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 주식가격",
+            "request": "launch",
+            "mainClass": "프로그래머스.스택큐.주식가격",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 프린터",
+            "request": "launch",
+            "mainClass": "프로그래머스.스택큐.프린터",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 모의고사",
+            "request": "launch",
+            "mainClass": "프로그래머스.완전탐색.모의고사",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 소수찾기",
+            "request": "launch",
+            "mainClass": "프로그래머스.완전탐색.소수찾기",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 카펫",
+            "request": "launch",
+            "mainClass": "프로그래머스.완전탐색.카펫",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 입국심사",
+            "request": "launch",
+            "mainClass": "프로그래머스.이분탐색.입국심사",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch H_Index",
+            "request": "launch",
+            "mainClass": "프로그래머스.정렬.H_Index",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch K번째수",
+            "request": "launch",
+            "mainClass": "프로그래머스.정렬.K번째수",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 가장큰수",
+            "request": "launch",
+            "mainClass": "프로그래머스.정렬.가장큰수",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 조이스틱",
+            "request": "launch",
+            "mainClass": "프로그래머스.탐욕법.조이스틱",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 체육복",
+            "request": "launch",
+            "mainClass": "프로그래머스.탐욕법.체육복",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 베스트앨범",
+            "request": "launch",
+            "mainClass": "프로그래머스.해시.베스트앨범",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 완주하지못한선수",
+            "request": "launch",
+            "mainClass": "프로그래머스.해시.완주하지못한선수",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 위장",
+            "request": "launch",
+            "mainClass": "프로그래머스.해시.위장",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 전화번호목록",
+            "request": "launch",
+            "mainClass": "프로그래머스.해시.전화번호목록",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 더맵게",
+            "request": "launch",
+            "mainClass": "프로그래머스.힙.더맵게",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 디스크컨트롤러",
+            "request": "launch",
+            "mainClass": "프로그래머스.힙.디스크컨트롤러",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이중우선순위큐",
+            "request": "launch",
+            "mainClass": "프로그래머스.힙.이중우선순위큐",
+            "projectName": "BOJ-Programmers_Algorithm_38f51bfb"
+        }
+    ]
+}
