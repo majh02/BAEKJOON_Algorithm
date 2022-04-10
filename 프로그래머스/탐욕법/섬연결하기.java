@@ -1,4 +1,5 @@
 //탐욕법_5번_섬 연결하기
+//https://tosuccess.tistory.com/22 참고했음
 
 package 프로그래머스.탐욕법;
 
@@ -10,60 +11,29 @@ public class 섬연결하기 {
         int[][] costs = {{0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8}};
         System.out.println(solution(n, costs));
     }
+
+    public static int[] findParent;
     public static int solution(int n, int[][] costs) {
         int answer = 0;
-        int[][] graph = new int[n][n];
-        for(int[] cost : costs){
-            int x = cost[0];
-            int y = cost[1];
-            int c = cost[2];
-            graph[x][y] = c;
-            graph[y][x] = c;
-        }
+        Arrays.sort(costs, (o1,o2)->o1[2]-o2[2]);
 
-        // for(int i=0;i<n;i++){
-        //     for(int j =i+1;j<n;j++){
-        //         for(int mid = 1;mid<j-i;mid++){
-        //             System.out.println("graph["+i+"]["+j+"]: "+graph[i][j]+", graph["+i+"]["+mid+"]+graph["+mid+"]["+j+"]: "+graph[i][mid]+"+"+graph[mid][j]);
-        //             graph[i][j] = Math.min(graph[i][j],graph[i][mid]+graph[mid][j]);
-        //             graph[j][i] = graph[i][j];
-        //         }
-        //     }
-        // }
-
+        findParent = new int[n];
         for(int i=0;i<n;i++){
-            boolean[][] visited = new boolean[n][n];
-            visited[i][i] = true;
-            find_min(visited, 1, 0, i, graph, n);
-            //min = Math.min(min, result);
-            // System.out.println("find min: "+min);
+            findParent[i] = i;
         }
 
-        answer = min;
+        for(int i=0;i<costs.length;i++){
+            int firstIsland = find(costs[i][0]);
+            int secondIsland = find(costs[i][1]);
+            if(firstIsland != secondIsland){
+                findParent[secondIsland] = firstIsland;
+                answer+=costs[i][2];
+            }
+        }
         return answer;
     }
-
-    public static int min = Integer.MAX_VALUE;
-    public static void find_min(boolean[][] visited, int count, int result, int start, int[][] graph, int n){
-        if(result>min) return;
-        if(count==n) {
-            min = Math.min(min, result);
-            return;
-        }
-        for(int i=0;i<n;i++){
-            if(graph[start][i]==0) continue;
-            if(visited[start][i]) continue;
-
-            System.out.println("result: "+result+", graph["+start+"]["+i+"]: "+graph[start][i]);
-            // System.out.println("start: "+start+", i: "+i+", result: "+result+", "+graph[start][i]+",   "+Arrays.toString(visited)+", count: "+count);
-            visited[start][i] = true;
-            visited[i][start] = true;
-            find_min(visited, count+1, result+graph[start][i], i, graph, n);
-            visited[start][i] = false;
-            visited[i][start] = false;
-            System.out.println("return!");
-        }
-
-        return;
+    public static int find(int child){
+        if(findParent[child]==child) return child;
+        return findParent[child] = find(findParent[child]);
     }
 }
