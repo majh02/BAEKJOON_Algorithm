@@ -29,27 +29,32 @@ public class 주사위굴리기 {
             direction[i] = Integer.parseInt(st.nextToken());
         }
 
+        System.out.println("direction: "+Arrays.toString(direction));
+
+        solution(N, M, K, map, direction, x, y, 0, 1, 2);
+
     }
 
     public static int[] dx = {0,0,-1,1};
     public static int[] dy = {1,-1,0,0};
-    public static void solution(int N, int M, int[][] map, int[] direction, int x, int y, int ceil, int north, int east){
+    public static void solution(int N, int M, int K, int[][] map, int[] direction, int x, int y, int ceil, int north, int east){
         int[] dice = new int[6];
 
-        for(int i=0;i<direction.length;i++){
+        for(int i=0;i<K;i++){
             int dir = direction[i]-1;
             int floor = 5-ceil;
             int south = 5-north;
             int west = 5-east;
 
-            int nx = x+dx[dir];
-            int ny = y+dy[dir];
+            int nx = x + dx[dir];
+            int ny = y + dy[dir];
 
             if(nx<0 || ny<0 || nx>=N || ny>=M) continue;
+            else{ x = nx; y = ny; }
+
             if(dir==0){ //동(east)
-                int tmp = west;
                 east = ceil;
-                ceil = tmp;
+                ceil = west;
             }
             else if(dir==1){ //서(west)
                 int tmp = east;
@@ -62,9 +67,25 @@ public class 주사위굴리기 {
                 ceil = south;
             }
             else{ //남(south)
+                int tmp = north;
                 north = floor;
-                ceil = north;
+                ceil = tmp;
             }
+
+            floor = 5-ceil;
+            south = 5-north;
+            west = 5-east;
+
+            if(map[nx][ny]==0){
+                map[nx][ny] = dice[floor];
+            }
+            else{
+                dice[floor] = map[nx][ny];
+                map[nx][ny] = 0;
+            }
+            // System.out.println("K: "+i+", ceil: "+ceil+", north: "+north+", east: "+east);
+            // System.out.println("dice: "+Arrays.toString(dice));
+            System.out.println(dice[ceil]);
         }
     }
 }
