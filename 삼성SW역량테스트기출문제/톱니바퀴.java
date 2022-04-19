@@ -28,12 +28,6 @@ public class 톱니바퀴 {
             rotate_dir[i] = Integer.parseInt(st.nextToken()); //1(시계방향), -1(반시계방향)
         }
 
-        // direction = new int[4];
-        // for(int j=0;j<4;j++){
-        //     rotate(j, direction[j]);
-        //     System.out.println("dir: "+direction[j]+", gear["+j+"]: "+Arrays.toString(gear[j]));
-        // }
-        // System.out.println();
         for(int i=0;i<K;i++){
             direction = new int[4];
             int rg = rotate_gear[i]-1;
@@ -43,14 +37,11 @@ public class 톱니바퀴 {
 
             for(int j=0;j<4;j++){
                 rotate(j, direction[j]);
-                // System.out.println("dir: "+direction[j]+", gear["+j+"]: "+Arrays.toString(gear[j]));
             }
-            // System.out.println();
         }
 
         int result = 0;
         for(int i=0;i<4;i++){
-            // System.out.println(gear[i][0]+", "+Math.pow(gear[i][0]*2,i));
             if(gear[i][0]==0) continue;
             result+=Math.pow(gear[i][0]*2,i);
         }
