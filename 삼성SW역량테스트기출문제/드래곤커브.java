@@ -3,7 +3,6 @@
 package 삼성SW역량테스트기출문제;
 
 import java.io.*;
-import java.security.Key;
 import java.util.*;
 
 public class 드래곤커브 {
@@ -27,13 +26,7 @@ public class 드래곤커브 {
             ArrayList<Integer> dir = new ArrayList<>();
             int x = dc[i][0], y = dc[i][1];
             dragon_curb(N, dc[i], dir, y, x, 0);
-            // System.out.println(dir);
         }
-
-        // for(int i=0;i<total_xy.size();i++){
-        //     System.out.println(Arrays.toString(total_xy.get(i)));
-        // }
-        // System.out.println(total_xy);
 
         int count = 0;
         for(int[] xy : total_xy){
