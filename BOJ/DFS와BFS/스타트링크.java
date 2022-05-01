@@ -41,26 +41,4 @@ public class 스타트링크 {
 
         return "use the stairs";
     }
-
-    // public static int count = 0;
-    // public static void dfs(boolean[] visited, int current, int cnt){
-    //     if(current>F || current<=0) return;
-    //     if(count!=0) return;
-    //     if(current == G) {
-    //         count = cnt;
-    //         return;
-    //     }
-
-    //     if(!visited[current]){
-    //         visited[current] = true;
-    //         dfs(visited, current+U, cnt+1);
-    //         if(count!=0) return;
-    //         dfs(visited, current-D, cnt+1);
-    //         if(count!=0) return;
-    //         visited[current] = false;
-    //     }
-
-    //     return;
-    // }
-    
 }
