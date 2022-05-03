@@ -35,8 +35,6 @@ public class 맥주마시면서걸어가기 {
             fest[0] = Integer.parseInt(st.nextToken());
             fest[1] = Integer.parseInt(st.nextToken());
 
-            // visited = new boolean[n];
-            // boolean flag = dfs(n, home[0], home[1]);
             boolean flag = bfs(n);
             if(flag) sb.append("happy\n");
             else sb.append("sad\n");
@@ -61,24 +59,6 @@ public class 맥주마시면서걸어가기 {
                 if(!visited[i] && Math.abs(x-cx)+Math.abs(y-cy)<=1000){
                     visited[i] = true;
                     queue.add(conv[i]);
-                }
-            }
-        }
-        return false;
-    }
-    
-    public static boolean dfs(int n, int x, int y){
-
-        if(Math.abs(x-fest[0])+Math.abs(y-fest[1])<=1000) return true;
-
-        for(int i=0;i<n;i++){
-            if(!visited[i]){
-                int cx = conv[i][0];
-                int cy = conv[i][1];
-                if(Math.abs(x-cx)+Math.abs(y-cy)<=1000){
-                    visited[i] = true;
-                    if(dfs(n, cx, cy)) return true;
-                    visited[i] = false;
                 }
             }
         }
