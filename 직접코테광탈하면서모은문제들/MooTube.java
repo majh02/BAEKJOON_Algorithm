@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.*;
 
 public class MooTube {
+    public static ArrayList<int[]>[] video;
     public static void main(String args[]) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
@@ -12,26 +13,17 @@ public class MooTube {
         int N = Integer.parseInt(st.nextToken());
         int Q = Integer.parseInt(st.nextToken());
 
-        int[][] video = new int[N+1][N+1];
+        video = new ArrayList[N+1];
         for(int i=1;i<=N;i++){
-            Arrays.fill(video[i], Integer.MAX_VALUE);
+            video[i] = new ArrayList<int[]>();
         }
         for(int i=0;i<N-1;i++){
             st = new StringTokenizer(br.readLine(), " ");
             int p = Integer.parseInt(st.nextToken());
             int q = Integer.parseInt(st.nextToken());
             int r = Integer.parseInt(st.nextToken());
-            video[p][q] = r;
-            video[q][p] = r;
-        }
-        for(int i=1;i<=N;i++){
-            for(int j=1;j<=N;j++){
-                if(i==j) continue;
-                if(video[i][j]!=Integer.MAX_VALUE) continue;
-                video[i][j] = dfs(N, video, i, j);
-                video[j][i] = video[i][j];
-            }
-            // System.out.println(Arrays.toString(video[i]));
+            video[p].add(new int[]{q,r});
+            video[q].add(new int[]{p,r});
         }
 
         for(int i=0;i<Q;i++){
@@ -40,25 +32,27 @@ public class MooTube {
             int v = Integer.parseInt(st.nextToken());
             
             int count = 0;
-            for(int j=1;j<=N;j++){
-                if(v==j) continue;
-                if(video[v][j]>=k) count++;
-            }
+            boolean[] visited = new boolean[N+1];
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(v);
 
-            sb.append(count+"\n");
+            while(!queue.isEmpty()){
+                int current = queue.poll();
+                visited[current] = true;
+
+                for(int[] next : video[current]){
+                    int nv = next[0]; //next video
+                    int value_nv = next[1]; //value of next video
+
+                    if(!visited[nv] && value_nv>=k){
+                        queue.add(nv);
+                        count++;
+                    }
+                }
+            }
+            sb.append(count).append("\n");
         }
 
         System.out.print(sb);
-    }
-
-    public static int dfs(int N, int[][] video, int p, int q){
-        if(p<=0 || q<=0 || p>N || q>N) return Integer.MAX_VALUE;
-        // System.out.println("p: "+p+", q: "+q);
-        if(video[p][q]!=Integer.MAX_VALUE) return video[p][q];
-        for(int mid=1;mid+p<q;mid++){
-            video[p][q] = Math.min(video[p][q], Math.min(dfs(N, video, p, p+mid), dfs(N, video, p+mid, q)));
-            video[q][p] = video[p][q];
-        }
-        return video[p][q];
     }
 }
