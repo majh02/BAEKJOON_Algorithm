@@ -4,8 +4,6 @@ package 직접코테광탈하면서모은문제들;
 import java.io.*;
 import java.util.*;
 
-import javax.swing.text.TabExpander;
-
 public class 새로운게임{
     public static ArrayList<Integer>[][] horse;
     public static int[][] board;
