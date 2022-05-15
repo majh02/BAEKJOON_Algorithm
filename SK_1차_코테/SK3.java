@@ -3,37 +3,65 @@ package SK_1차_코테;
 import java.util.*;
 
 public class SK3 {
+    public static int width, height;
     public static void main(String args[]){
-        int width = 2;
-        int height = 2;
+        width = 2;
+        height = 2;
         int[][] diagonals = {{1,1}, {2,2}};
         System.out.println(solution(width, height, diagonals));
     }
 
+    public static long[][][][] dp;
+    public static boolean[][] visited;
     public static int solution(int width, int height, int[][] diagonals) {
         int answer = 0;
-        int[][][] dp = new int[height+2][width+2][2];
-        long[][] dist = new long[height+2][width+2];
+        dp = new long[height+1][width+1][height+1][width+1];
+        visited = new boolean[height+2][width+2];
 
-        for(int i=0;i<=height+1;i++){
-            Arrays.fill(dist[i], Integer.MAX_VALUE);
-        }
         for(int[] diag : diagonals){
-            int x = diag[0];
-            int y = height-diag[1];
-            dist[y][x] = -1;
-            dist[y+1][x+1] = -1;
-        }
-        dp[height][1][0] = 1;
-        for(int i=height;i>=0;i--){
-            for(int j=1;j<=width+1;j++){
-                
-            }
-        }
+            int x = height-diag[0];
+            int y = diag[1]-1;
+            visited = new boolean[height+1][width+1];
+            dfs(2, 0, 2, 0, x, y);
+            System.out.println();
+            dfs(x+1, y+1, x+1, y+1, 0, width);
+            answer+=dp[2][0][x][y]*dp[x+1][y+1][0][width]%10000019;
+            System.out.println(dp[2][0][x][y]+", "+dp[x+1][y+1][0][width]);
 
-        
+            System.out.println();
+            dfs(2, 0, 2, 0, x+1, y+1);
+            System.out.println();
+            dfs(x, y, x, y, 0, width);
+            answer+=dp[2][0][x+1][y+1]*dp[x][y][0][width]%10000019;
+            System.out.println(dp[2][0][x+1][y+1]+", "+dp[x][y][0][width]);
+        }
 
         return answer;
+    }
+
+    public static int[] dx = {0, -1};
+    public static int[] dy = {1, 0};
+    public static int count = 0;
+    public static void dfs(int x, int y, int sx, int sy, int gx, int gy){
+        if(x<0 || y<0 || x>height || y>width) return;
+        if(visited[x][y]) return;
+
+        dp[sx][sy][x][y]++;
+        if(x==gx && y==gy){
+            System.out.println("arrived");
+            return;
+        }
+
+        for(int i=0;i<2;i++){
+            int nx = x+dx[i];
+            int ny = y+dy[i];
+            if(nx<0 || ny<0 || nx>height || ny>width) continue;
+            dp[sx][sy][nx][ny] += dp[sx][sy][x][y];
+            // visited[nx][ny] = true;
+            dfs(nx, ny, sx, sy, gx, gy);
+            dp[sx][sy][nx][ny] -= dp[sx][sy][x][y];
+            visited[nx][ny] = false;
+        }
     }
 
     // public static int[] x_direction = {0, 1};
