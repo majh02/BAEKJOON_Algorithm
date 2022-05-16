@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DFSBFS_타겟넘버 {
     public static void main(String args[]){
-        int[] numbers = {4, 1, 2, 1};
+        int[] numbers = {1, 1, 1, 1, 2};
         int target = 4;
 
         System.out.println(solution(numbers, target));
@@ -32,12 +32,16 @@ public class DFSBFS_타겟넘버 {
             count++;
             return;
         }
-        else if(sum<target) return;
+        else if(sum<target){
+            return;
+        }
 
         for(int i=index+1;i<numbers.length;i++){
             dfs(numbers, target, i, sum);
+            visited[i] = false;
         }
-        visited[index] = false;
+
+        return;
     }
     
 }
