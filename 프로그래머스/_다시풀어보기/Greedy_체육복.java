@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Greedy_체육복 {
     public static void main(String args[]){
-        int n = 3;
-        int[] lost = {3};
-        int[] reserve = {1};
+        int n = 5;
+        int[] lost = {1,2,3};
+        int[] reserve = {4};
         System.out.println(solution(n, lost, reserve));
 
     }
@@ -16,24 +16,19 @@ public class Greedy_체육복 {
         Arrays.fill(student, 1);
 
         Arrays.sort(lost);
-        for(int l:lost){
-            student[l] = 0;
-        }
         for(int r: reserve){
             student[r] = 2;
         }
+        for(int l:lost){
+            student[l]--;
+        }
 
         for(int l : lost){
-            if(l==1 && student[l+1]==2){
-                student[l]=student[l+1]=1;
-            }
-            else if(l==n && student[l-1]==2){
+            if(student[l]!=0) continue;
+            if(l>1 && student[l-1]==2){
                 student[l]=student[l-1]=1;
             }
-            else if(l!=1 && student[l-1]==2){
-                student[l]=student[l-1]=1;
-            }
-            else if(l!=n && student[l+1]==2){
+            else if(l<n && student[l+1]==2){
                 student[l]=student[l+1]=1;
             }
             
