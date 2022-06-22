@@ -18,9 +18,9 @@ public class 완전탐색_소수찾기 {
         ArrayList<Integer> created_nums = new ArrayList<>();
         for(int i=0;i<len;i++){
             if(num[i]=='0') continue;
+            if(created_nums.contains(num[i]-'0')) continue;
             
             boolean[] visited = new boolean[len];
-            if(created_nums.contains(num[i]-'0')) continue;
             created_nums.add(num[i]-'0');
             visited[i] = true;
             DFS(num, created_nums, visited, len, ""+num[i]);
