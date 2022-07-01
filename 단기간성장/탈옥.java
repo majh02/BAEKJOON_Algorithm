@@ -86,32 +86,6 @@ public class 탈옥 {
         return false;
     }
 
-    public static void DFS2(int[][] map, boolean[][] visited, int x, int y, int end_x, int end_y, int h, int w, int cnt){
-        if(x==0 || y==0 || x==h-1 || y==w-1){
-            return;
-        }
-
-        for(int i=0;i<4;i++){
-            int nx = x+dx[i];
-            int ny = y+dy[i];
-            if(nx<0 || ny<0 || nx>=h  || ny>=w) continue;
-            if(!visited[nx][ny] && map[nx][ny]!=-1){
-                if(map[nx][ny]==0){
-                    DFS2(map, visited, x, y, end_x, end_y, h, w, cnt);
-                }
-                else{
-                    if(map[nx][ny]==cnt-1){
-                        DFS2(map, visited, nx, ny, end_x, end_y, h, w, cnt-1);
-                    }
-                    else{
-
-                    }
-                }
-            }
-        }
-    }
-
-
 
 
 
