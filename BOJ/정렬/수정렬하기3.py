@@ -1,10 +1,15 @@
+# https://somjang.tistory.com/entry/Mxmxmxm 참고했음
 import sys
 
 N = int(sys.stdin.readline())
-arr = [10001 for i in range(10000001)]
+dictionary = dict()
 for i in range(N):
-    arr[i] = int(sys.stdin.readline())
+    num = int(sys.stdin.readline())
+    if num not in dictionary.keys():
+        dictionary[num] = 1
+    else: dictionary[num] += 1
+dictionary = sorted(dictionary.items())
 
-arr.sort()
-for i in range(N):
-    print(arr[i])
+for i in range(dictionary.__len__()):
+    for j in range(dictionary[i][1]):
+        print(dictionary[i][0])
