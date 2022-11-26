@@ -13,7 +13,7 @@ def solution(answers):
     max_score = max(score)
     for i in range(3):
         if max_score==score[i]:
-            answer.append(i)
+            answer.append(i+1)
         
     return answer
 
