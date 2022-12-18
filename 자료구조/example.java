@@ -12,6 +12,6 @@ public class example {
         char c = abc.charAt(1);
         int l = abc.length();
         ArrayList<Character> id = new ArrayList<>();
-        StringBuilder
+        // StringBuilder
     }    
 }
