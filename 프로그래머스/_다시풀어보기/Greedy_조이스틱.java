@@ -20,7 +20,7 @@ public class Greedy_조이스틱 {
                 index++;
             }
 
-            answer = Math.min(answer, )
+            // answer = Math.min(answer, )
         }
         return answer;
     }
